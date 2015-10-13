@@ -5,7 +5,7 @@ app.get('/', function(req, res){
   res.json(g.c());
 });
 
-app.listen(3000);
+app.listen(process.env.PORT);
 
 var g = (function(){
   var c = 1;
