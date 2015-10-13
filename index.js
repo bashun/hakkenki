@@ -9,7 +9,7 @@ app.get('/show', function(req, res){
   res.json(g.s());
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 var g = (function(){
   var c = 1;
