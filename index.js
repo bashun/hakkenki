@@ -5,7 +5,11 @@ app.get('/', function(req, res){
   res.json(g.c());
 });
 
-app.listen(process.env.PORT);
+app.get('/show', function(req, res){
+  res.json(g.s());
+});
+
+app.listen(3000);
 
 var g = (function(){
   var c = 1;
@@ -15,7 +19,12 @@ var g = (function(){
     return JSON.stringify({"count" : c});
   }
 
+  var show = function show(){
+    return JSON.stringify({"count" : c});
+  }
+
   return {
-    c : cnt
+    c : cnt,
+    s : show
   };
 }());
