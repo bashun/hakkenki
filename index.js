@@ -12,7 +12,7 @@ app.get('/show', function(req, res){
 app.listen(process.env.PORT || 3000);
 
 var g = (function(){
-  var c = 1;
+  var c = 0;
 
   var cnt = function cnt(){
     c++;
